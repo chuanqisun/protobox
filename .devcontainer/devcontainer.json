@@ -1,0 +1,11 @@
+{
+  "name": "Protobox Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {},
+  "postCreateCommand": "./.devcontainer/init.sh",
+  "remoteUser": "node",
+  "forwardPorts": [8080],
+  "extensions": ["esbenp.prettier-vscode"]
+}
