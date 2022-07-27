@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "devDependencies": {
+    "concurrently": "^7.3.0",
     "prettier": "^2.7.1"
   },
   "scripts": {
     "dev": "npm run dev -w apps/web",
     "build": "npm run build -w apps/web",
-    "preview": "npm run preview -w apps/preview"
+    "preview": "npm run preview -w apps/preview",
+    "test": "npm run test -w apps/web"
   },
   "author": "Chuanqi Sun",
   "workspaces": [

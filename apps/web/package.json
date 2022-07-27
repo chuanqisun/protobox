@@ -4,11 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --clearScreen false",
-    "build": "tsc && vite build",
+    "dev": "concurrently npm:dev:app npm:test:watch npm:storybook",
+    "dev:app": "vite --clearScreen false",
+    "build": "concurrently npm:build:*",
+    "build:types": "tsc",
+    "build:app": "vite build",
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -26,6 +31,7 @@
     "@types/styled-components": "^5.1.25",
     "@vitejs/plugin-react": "^2.0.0",
     "typescript": "^4.7.4",
-    "vite": "^3.0.3"
+    "vite": "^3.0.3",
+    "vitest": "^0.19.1"
   }
 }
